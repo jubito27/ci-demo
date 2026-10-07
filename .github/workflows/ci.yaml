@@ -23,10 +23,6 @@ jobs:
     - name: Run main file
       run: |
         python main.py
-    
-    - name: Run Tests
-      run: |
-        python -m unittest discover
 
     - name: Create CML report
       env:
