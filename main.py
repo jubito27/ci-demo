@@ -1,4 +1,8 @@
-import matplotlib.pyplot as plt #type: ignore
+from pathlib import Path
+
+import matplotlib.pyplot as plt  # type: ignore
+
+output_dir = Path(__file__).resolve().parent
 
 print("Step 1-")
 fig, ax = plt.subplots()
@@ -16,7 +20,7 @@ ax.set_title('Main characters rating from top 4 anime')
 print("Step 6-")
 ax.legend(title='Hair c')
 print("Step 7-")
-plt.savefig('bars.png', bbox_inches='tight')
+plt.savefig(output_dir / 'bars.png', bbox_inches='tight')
 print("Step 8-")
 cat = ["bored", "happy", "happy", "happy", "happy", "bored"]
 dog = ["bored", "bored", "bored", "happy", "bored", "bored"]
@@ -29,5 +33,5 @@ ax.plot(activity, cat, label="cat")
 print("Step 11-")
 ax.legend()
 print("Step 12-")
-plt.savefig('lines.png', bbox_inches='tight')
+plt.savefig(output_dir / 'lines.png', bbox_inches='tight')
 print("Step 13-")
